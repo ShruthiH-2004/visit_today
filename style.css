@@ -65,7 +65,7 @@ body {
 .hero {
     height: 100vh;
     /* You can replace this background image later */
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('shivamogga-railway_station.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('shivamogga-railway_station2.jpg');
     background-color: #94a3b8; /* fallback color if image doesn't exist yet */
     background-size: cover;
     background-position: center;
@@ -143,6 +143,11 @@ body {
 .bg-dark { background-color: #1e293b; }
 .bg-teal { background-color: #0d9488; }
 .bg-purple { background-color: #7c3aed; }
+.bg-indigo {background-color: #4f46e5;}
+.bg-rose {background-color: #e5335a;}
+.bg-emerald {background-color: #14eaa6;}
+.bg-amber {background-color: #d97706;}
+.bg-cyan {background-color: #0891b2;}
 
 .split-text h3 {
     font-size: 3.5rem;
@@ -238,7 +243,7 @@ body {
     /* .video-grid {
         flex-direction: column;
         gap: 40px;} */
-        
+
 .slider-btn:hover {
     background-color: #2563eb;
     color: #ffffff;
