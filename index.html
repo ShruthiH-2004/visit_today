@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit Shivamogga</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,13 +26,12 @@
             <h1>Welcome to Travel Guide</h1>
             <h2>Discover the beauty of Shivamogga</h2>
             <p>Explore culture, food, and beautiful places</p>
-            <a href="https://goo.gl/maps/shivamogga-placeholder" class="btn" target="_blank" rel="noopener noreferrer">Explore on Map</a>
+            <a href="https://maps.app.goo.gl/cpMCUGjP7gW65TzHA" class="btn" target="_blank" rel="noopener noreferrer">Explore on Map</a>
         </div>
     </section>
 
     <!-- Places Section -->
     <section id="places" class="places-section">
-        <!-- Split Section 1 -->
         <div class="split-section">
             <div class="split-text bg-blue">
                 <h3>Jog Falls</h3>
@@ -43,7 +43,6 @@
             </div>
         </div>
 
-        <!-- Split Section 2 -->
         <div class="split-section reverse">
             <div class="split-text bg-dark">
                 <h3>Agumbe</h3>
@@ -144,37 +143,5 @@
         </div>
     </footer>
 
-    <!-- Video Slider Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.getElementById('videoSlider');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-
-            if (slider && prevBtn && nextBtn) {
-                // Scroll amount gets dynamically calculated based on one card's width + gap
-                const scrollAmount = 350;
-
-                prevBtn.addEventListener('click', () => {
-                    if (slider.scrollLeft <= 0) {
-                        // Loop to the end if at the start
-                        slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
-                    } else {
-                        slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                    }
-                });
-
-                nextBtn.addEventListener('click', () => {
-                    // Using Math.ceil and an offset to elegantly handle sub-pixel fractional values
-                    if (Math.ceil(slider.scrollLeft + slider.clientWidth) >= slider.scrollWidth - 1) {
-                        // Loop to the start if at the end
-                        slider.scrollTo({ left: 0, behavior: 'smooth' });
-                    } else {
-                        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 </html>
