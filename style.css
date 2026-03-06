@@ -74,7 +74,7 @@ body {
     align-items: center;
     text-align: center;
     color: #ffffff;
-    padding-top: 80px; /* Offset for navbar */
+    padding-top: 80px;
 }
 
 .hero-content h1 {
