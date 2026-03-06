@@ -1,0 +1,416 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #2563eb;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    /* You can replace this background image later */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('shivamogga-railway_station.jpg');
+    background-color: #94a3b8; /* fallback color if image doesn't exist yet */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 80px; /* Offset for navbar */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Places Section */
+.places-section {
+    background-color: #ffffff;
+}
+
+.split-section {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* This reverses the layout for alternating sections */
+.split-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.split-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 10%;
+    color: #ffffff;
+}
+
+/* Background Color Variations */
+.bg-blue { background-color: #3b82f6; }
+.bg-dark { background-color: #1e293b; }
+.bg-teal { background-color: #0d9488; }
+.bg-purple { background-color: #7c3aed; }
+
+.split-text h3 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.split-text p {
+    color: #f1f5f9;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+}
+
+.btn-outline:hover {
+    background-color: #ffffff;
+    color: #0f172a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.split-image {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: #e2e8f0; /* fallback color */
+    min-height: 500px; /* Ensures a good height on larger screens */
+}
+
+.split-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Image zoom on hover */
+.split-section:hover .split-image img {
+    transform: scale(1.05);
+}
+
+/* Video Section */
+.video-section {
+    padding: 100px 0;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 3rem;
+    color: #0f172a;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider-btn {
+    background-color: #ffffff;
+    color: #334155;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: absolute;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.prev-btn {
+    left: -25px;
+}
+
+.next-btn {
+    right: -25px;
+}
+
+.video-grid {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 10px 40px;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 #f1f5f9;
+}
+
+.video-grid::-webkit-scrollbar {
+    height: 8px;
+}
+.video-grid::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+.video-grid::-webkit-scrollbar-thumb {
+    background-color: #94a3b8;
+    border-radius: 10px;
+}
+.video-grid::-webkit-scrollbar-thumb:hover {
+    background-color: #64748b;
+}
+
+/* Video card styling */
+.video-card {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: 320px;
+    scroll-snap-align: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover lift */
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.video-card iframe {
+    border-radius: 10px;
+    background-color: #cbd5e1; 
+}
+
+/* Footer */
+.footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.footer-content p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover color change */
+.social-links a:hover {
+    color: #3b82f6;
+}
+
+.contact-email {
+    font-size: 0.9rem;
+}
+
+
+/* --- Responsive Media Queries --- */
+
+/* 1024px */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    .hero-content h2 {
+        font-size: 3.2rem;
+    }
+    .split-section {
+        gap: 35px;
+    }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content h2 {
+        font-size: 2.6rem;
+    }
+    
+    /* Split layout becomes stacked layout */
+    .split-section, .split-section.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .split-text {
+        align-items: center;
+        padding: 60px 20px;
+    }
+    
+    .split-image {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    /* Adjust slider buttons on mobile */
+    .prev-btn {
+        left: -10px;
+    }
+    .next-btn {
+        right: -10px;
+    }
+    
+    .video-card {
+        flex: 0 0 85%;
+        min-width: 280px;
+    }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+    /* Navbar becomes stacked */
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .hero {
+        padding-top: 130px; /* Adjust top padding for stacked navbar height */
+    }
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+}
