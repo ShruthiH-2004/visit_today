@@ -64,9 +64,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    /* You can replace this background image later */
-    background-image: url('shivamogga-railway_station.jpg');
-    background-color: #94a3b8; /* fallback color if image doesn't exist yet */
+    background-image: url('images/shivamogga-railway_station.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -109,19 +107,19 @@ body {
 
 .hero-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 5px; /* Reduced gap */
+    margin-bottom: 5px; 
     font-weight: 300;
 }
 
 .hero-content h2 {
     font-size: 4rem;
-    margin-bottom: 15px; /* Reduced gap */
+    margin-bottom: 15px; 
     font-weight: 600;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 30px; /* Reduced gap */
+    margin-bottom: 30px;
 }
 
 .btn {
@@ -153,7 +151,6 @@ body {
     width: 100%;
 }
 
-/* This reverses the layout for alternating sections */
 .split-section.reverse {
     flex-direction: row-reverse;
 }
@@ -211,8 +208,8 @@ body {
     flex: 1;
     overflow: hidden;
     position: relative;
-    background-color: #e2e8f0; /* fallback color */
-    min-height: 500px; /* Ensures a good height on larger screens */
+    background-color: #e2e8f0;
+    min-height: 500px;
 }
 
 .split-image img {
@@ -268,11 +265,6 @@ body {
     z-index: 10;
     transition: all 0.3s ease;
 }
-
-/* Video cards become single column */
-    /* .video-grid {
-        flex-direction: column;
-        gap: 40px;} */
 
 .slider-btn:hover {
     background-color: #2563eb;
@@ -445,7 +437,7 @@ body {
         gap: 15px;
     }
     .hero {
-        padding-top: 130px; /* Adjust top padding for stacked navbar height */
+        padding-top: 130px; 
     }
     .hero-content h2 {
         font-size: 2.2rem;
